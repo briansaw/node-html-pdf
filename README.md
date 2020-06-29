@@ -1,12 +1,12 @@
 # node-html-pdf
 
-## Add Html for PDF file
+### Add Html for PDF file
 Copy template/page_01 to template/page_xx
 
-## Edit Html for PDF file
+### Edit Html for PDF file
 template/page_xx
 
-## Modify index.js
+### Modify index.js
 .
 
 .
@@ -32,12 +32,12 @@ await createPDF(req.body, milis, 'th', 'xx', true); // new line
 Remark: createPDF(data.json, miliseconds, language='th', num_of_page='xx', landscape_status='true or false')
 
 
-## Run
+### Run
 npm install
 
 npm start
 
-## Postman
+### Postman
 Url: localhost:5000/download
 
 Headers: [{"key":"Content-Type","value":"application/json","description":""}]
