@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IVS Reports</title>
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="page">
+		<div class="report-header">
+			{{ static_label.header }}
+		</div>
+		
+		<div class="report-detail">
+
+			<div class="row"><div class="new-line"></div></div>
+
+			<div class="row">
+				<table>
+					<tr>
+					  	<th>{{ static_label.label001 }}</th>
+						<th>{{ static_label.label002 }}</th>
+						<th>{{ static_label.label003 }}</th>
+						<th>{{ static_label.label004 }}</th>
+						<th>{{ static_label.label005 }}</th>
+						<th>{{ static_label.label006 }}</th>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label007 }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2">{{ data.jobcompares.0.property_type }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.1.property_type }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.2.property_type }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.3.property_type }}</td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1 td-row-1">{{ static_label.label008 }}</td>
+						<td class="td-center td-col-2 td-row-1-img"><img src="{{ data.jobs.main_img_file_name }}" /></td>
+						<td class="td-center td-col-2 td-row-1-img"><img src="{{ data.jobcompares.0.listing_image_detail.[0] }}" /></td>
+						<td class="td-center td-col-2 td-row-1-img"><img src="{{ data.jobcompares.1.listing_image_detail.[0] }}" /></td>
+						<td class="td-center td-col-2 td-row-1-img"><img src="{{ data.jobcompares.2.listing_image_detail.[0] }}" /></td>
+						<td class="td-center td-col-2 td-row-1-img"><img src="{{ data.jobcompares.3.listing_image_detail.[0] }}" /></td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label009 }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label010 }}</td>
+						<td class="td-left td-col-2">{{ data.jobbuildings.0.job_build_deed_no }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label011 }}</td>
+						<td class="td-left td-col-2">{{ data.jobbuildings.0.job_type_build }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label012 }}</td>
+						<td class="td-left td-col-2">{{ data.jobs.area_rai }}, {{ data.jobs.area_ngan }}, {{ data.jobs.area_square_wa }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.0.area_total_rai }}, {{ data.jobcompares.0.area_total_ngan }}, {{ data.jobcompares.0.area_total_wa }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.1.area_total_rai }}, {{ data.jobcompares.1.area_total_ngan }}, {{ data.jobcompares.1.area_total_wa }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.2.area_total_rai }}, {{ data.jobcompares.2.area_total_ngan }}, {{ data.jobcompares.2.area_total_wa }}</td>
+						<td class="td-left td-col-2">{{ data.jobcompares.3.area_total_rai }}, {{ data.jobcompares.3.area_total_ngan }}, {{ data.jobcompares.3.area_total_wa }}</td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1 td-row-2">{{ static_label.label013 }}</td>
+						<td class="td-left td-col-2 td-row-2">{{ data.jobs.housing_estate_name }}</td>
+						<td class="td-left td-col-2 td-row-2">{{ data.jobcompares.0.project_name }}</td>
+						<td class="td-left td-col-2 td-row-2">{{ data.jobcompares.1.project_name }}</td>
+						<td class="td-left td-col-2 td-row-2">{{ data.jobcompares.2.project_name }}</td>
+						<td class="td-left td-col-2 td-row-2">{{ data.jobcompares.3.project_name }}</td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1 td-row-3">{{ static_label.label014 }}</td>
+						<td class="td-left td-col-2 td-row-3">{{ data.jobs.house_number }}, {{ data.jobs.road }}, {{ data.jobs.sub_district }}, {{ data.jobs.district }}, {{ data.jobs.province }}</td>
+						<td class="td-left td-col-2 td-row-3">{{ data.jobcompares.0.address_subdistrict }}, {{ data.jobcompares.0.address_district }}, {{ data.jobcompares.0.address_province }}, {{ data.jobcompares.0.project_zipcode }}</td>
+						<td class="td-left td-col-2 td-row-3">{{ data.jobcompares.1.address_subdistrict }}, {{ data.jobcompares.1.address_district }}, {{ data.jobcompares.1.address_province }}, {{ data.jobcompares.1.project_zipcode }}</td>
+						<td class="td-left td-col-2 td-row-3">{{ data.jobcompares.2.address_subdistrict }}, {{ data.jobcompares.2.address_district }}, {{ data.jobcompares.2.address_province }}, {{ data.jobcompares.2.project_zipcode }}</td>
+						<td class="td-left td-col-2 td-row-3">{{ data.jobcompares.3.address_subdistrict }}, {{ data.jobcompares.3.address_district }}, {{ data.jobcompares.3.address_province }}, {{ data.jobcompares.3.project_zipcode }}</td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label015 }}</td>
+						<td class="td-left td-col-2">{{ data.jobdeeds.0.job_passroad_cond }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label016 }}</td>
+						<td class="td-left td-col-2">{{ data.jobdeeds.0.job_passroad_lane }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+					</tr>
+					<tr class="list">
+						<td class="td-left td-col-1">{{ static_label.label017 }}</td>
+						<td class="td-left td-col-2">{{ data.jobdeeds.0.job_passroad_wide }}, {{ data.jobdeeds.0.job_passroad_area }}</td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+						<td class="td-left td-col-2"></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+		<div class="report-footer">
+			<span class="report-footer-company">{{ data.partner.partner_name }}</span>
+			<span class="report-footer-address">{{ static_label.footer_address }}&nbsp;{{ data.partner.partner_address }}&nbsp;{{ static_label.footer_phone }}&nbsp;{{ data.partner.partner_tel }}</span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IVS Reports</title>
+	<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="page">
+		<div class="report-header">
+			{{ static_label.header }}
+		</div>
+		<div class="report-detail">
+
+			<div class="row"><div class="new-line"></div></div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label001 }}</div>
+					<div class="text"></div>
+				</div>
+				<div class="col">
+					<div class="label2">{{ static_label.label002 }}</div>
+					<div class="text">{{ data.jobs.created_at }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label003 }}</div>
+					<div class="text">{{ data.jobs.ca_no }}</div>
+				</div>
+				<div class="col">
+					<div class="label2">{{ static_label.label004 }}&nbsp;</div>
+					<div class="text">{{ data.jobs.ass_type }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label005 }}&nbsp;</div>
+					<div class="text">{{ data.jobs.job_purpose }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label006 }}</div>
+					<div class="text">{{ data.jobs.cust_type }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label007 }}&nbsp;</div>
+					<div class="text">{{ data.jobs.customer_name }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label008 }}</div>
+					<div class="text">{{ data.jobs.client_id }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<table>
+					<tr>
+					  	<th>{{ static_label.label009 }}</th>
+					  	<th>{{ static_label.label010 }}</th>
+					</tr>
+					<tr class="list">
+						<td class="td-1 td-left">
+							ทาวน์เฮาส์<br/>
+							เลขที่ 608/240 ถนน ถ.ลาดปลาเค้า แขวง จรเข้บัว เขต ลาดพร้าว กรุงเทพมหานคร
+						</td>
+					  	<td class="td-2 td-right">{{ data.jobs.wqs_round_price }}</td>
+					</tr>
+					<tr class="footer-1">
+						<td class="td-1 td-left">{{ static_label.label011 }}</td>
+						<td class="td-2 td-right">{{ data.jobs.wqs_round_price }}</td>
+					</tr>
+					<tr class="footer-2">
+						<td colspan="2" class="td td-right">{{ data.jobs.wqs_round_price }}</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="row"><div class="new-line"></div></div>
+
+			<div class="row">
+				<div class="col">
+					<div class="label">{{ static_label.label012 }}</div>
+					<div class="text">{{ data.jobs.appointment_date }}</div>
+				</div>
+			</div>
+
+			<div class="row"><div class="new-line"></div></div>
+
+			<div class="row">
+				<div class="col">
+					<div class="text-no-line">{{ static_label.label013 }}</div>
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ static_label.label014 }}</div>
+				</div>
+				<div class="col">
+					<div class="text-no-line">{{ static_label.label015 }}</div>
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ static_label.label016 }}</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</div>
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+				</div>
+				<div class="col">
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(</div>
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ data.jobs.user_id }}</div>
+				</div>
+				<div class="col">
+					<div class="text-no-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ static_label.label017 }}</div>
+				</div>
+			</div>
+
+			<div class="row"><div class="new-line"></div></div>
+
+			<div class="row">
+				<div class="title-bg">
+					{{ static_label.label018 }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="text-no-line">{{ data.partner.partner_name }}</div>
+				</div>
+			</div>
+		</div>
+		<div class="report-footer">
+			<span class="report-footer-company">{{ data.partner.partner_name }}</span>
+			<span class="report-footer-address">{{ static_label.footer_address }}&nbsp;{{ data.partner.partner_address }}&nbsp;{{ static_label.footer_phone }}&nbsp;{{ data.partner.partner_tel }}</span>
+		</div>
+	</div>
+</body>
+</html>
